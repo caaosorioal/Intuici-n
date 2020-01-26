@@ -6,8 +6,6 @@ import matplotlib.style as style
 
 rango = [0,100]
 
-rango = [0,100]
-
 def simulacion_juego(numero_escogido):
 ''''Simular la escogencia para valores aleatorios a,b;
     estos valores no pueden ser iguales por comodidad''''
