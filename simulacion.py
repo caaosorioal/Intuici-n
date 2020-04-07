@@ -17,26 +17,14 @@ def simulacion_juego(numero_escogido):
         a = random.randint(rango[0], rango[1])
         b = random.randint(rango[0], rango[1])
     
-    seleccion_estrategia = 0
-    
-    if a >= numero_escogido:
-        seleccion_estrategia = a
-    else:
-        seleccion_estrategia = b
+    seleccion_etrategia = a if a >= numero_escogido else b
         
     seleccion_aleatoria = random.sample([a,b], 1)[0]
     
-    if seleccion_estrategia == max([a,b]):
-        estrategia_correcto = 1
-    else:
-        estrategia_correcto = 0
+    estrategia_correcto = 1 if seleccion_estrategia == max([a,b]) else 0
     
-    
-    if seleccion_aleatoria == max([a,b]):
-        aleatoria_correcto = 1
-    else:
-        aleatoria_correcto = 0
-    
+    aleatorio_correcto = 1 if seleccion_aleatoria == max([a,b]) else 0
+  
     return dict(zip(["Estrategia", "Aleatoria"], [estrategia_correcto, aleatoria_correcto]))
     
 n_simulaciones = 25000
